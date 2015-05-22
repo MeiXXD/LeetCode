@@ -38,6 +38,18 @@ public class ReverseLinkedList {
 		head.next = null;
 		return result;
 	}
+	
+	public static ListNode reverseList2(ListNode head) {
+		ListNode p = head;
+		ListNode q = null;
+		while (p != null) {
+			ListNode temp = p.next;
+			p.next = q;
+			q = p;
+			p = temp;
+		}
+		return q;
+	}
 }
 
 class ListNode {
