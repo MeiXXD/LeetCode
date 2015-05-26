@@ -91,6 +91,8 @@ public class ThreeSum {
 					while (start < nums.length - 1
 							&& nums[start] == nums[start - 1])
 						start++;
+					while (end > start && nums[end] == nums[end + 1])
+						end--;
 				} else if (a + b + c > 0) {
 					end--;
 				} else {
